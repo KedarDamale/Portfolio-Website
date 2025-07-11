@@ -15,3 +15,7 @@ app.add_middleware(
 @app.get('/')
 async def hello():
     return {'msg':'Hello Kedar!'}
+
+@app.get('/name')
+async def name(n):
+    return {"msg": f"Hello {n}"}
